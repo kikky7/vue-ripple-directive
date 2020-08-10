@@ -105,6 +105,7 @@ var Ripple = {
                 }, 850);
 
                 el.removeEventListener('mouseup', clearRipple, false);
+                el.removeEventListener('mousemove', clearRipple, false);
                 el.removeEventListener('dragstart', clearRipple, false);
 
                 // After removing event set position to target to it's original one
@@ -131,6 +132,7 @@ var Ripple = {
 
             if(event.type === 'mousedown') {
                 el.addEventListener('mouseup', clearRipple, false);
+                el.addEventListener('mousemove', clearRipple, false);
                 el.addEventListener('dragstart', clearRipple, false);
             } else {
                 clearRipple();
