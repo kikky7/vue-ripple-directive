@@ -65,7 +65,7 @@ var Ripple = {
             // Store target position to change it after
             var storedTargetPosition =  ((target.style.position).length > 0) ? target.style.position : getComputedStyle(target).position;
             // Change target position to relative to guarantee ripples correct positioning
-            if (storedTargetPosition !== 'relative') {
+            if (storedTargetPosition !== 'absolute' || storedTargetPosition !== 'relative') {
                 target.style.position = 'relative';
             }
 
